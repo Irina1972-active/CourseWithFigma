@@ -4,8 +4,7 @@ import tailwindcss from '@tailwindcss/vite';
 import react from '@vitejs/plugin-react';
 
 export default defineConfig({
-  // 👇 Добавьте эту строку — имя вашего репозитория на GitHub
-  base: '/FigmaCourse/',
+  base: '/CourseWithFigma/',   // исправлено!
   plugins: [
     react(),
     tailwindcss(),
