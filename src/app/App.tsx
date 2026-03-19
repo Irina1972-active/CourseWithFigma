@@ -1,10 +1,11 @@
-import { 
-  Plane, 
-  Users, 
-  Hotel, 
-  UtensilsCrossed, 
-  MapPin, 
-  AlertCircle, 
+import React, { useState } from 'react';
+import {
+  Plane,
+  Users,
+  Hotel,
+  UtensilsCrossed,
+  MapPin,
+  AlertCircle,
   Camera,
   UserPlus,
   Trophy,
@@ -18,9 +19,10 @@ import {
 import { ImageWithFallback } from './components/figma/ImageWithFallback';
 
 export default function App() {
-  const scrollToBottom = () => {
-    window.scrollTo({ top: document.body.scrollHeight, behavior: 'smooth' });
-  };
+  // Состояние для модального окна
+  const [isModalOpen, setIsModalOpen] = useState(false);
+  const openModal = () => setIsModalOpen(true);
+  const closeModal = () => setIsModalOpen(false);
 
   return (
     <div className="min-h-screen bg-background text-foreground">
@@ -42,21 +44,22 @@ export default function App() {
             <Sparkles className="w-4 h-4 text-primary" />
             <span className="text-sm text-primary">Набор открыт!</span>
           </div>
-          
+
           <h1 className="text-4xl md:text-6xl lg:text-7xl mb-6 bg-gradient-to-r from-primary via-secondary to-accent bg-clip-text text-transparent">
             Английский для путешествий
           </h1>
-          
+
           <p className="text-lg md:text-xl lg:text-2xl text-muted-foreground max-w-4xl mx-auto mb-8 leading-relaxed">
             Мечтаете свободно общаться за границей — от заказа кофе до поиска утраченного чемодана?
           </p>
-          
+
           <p className="text-base md:text-lg text-foreground/90 max-w-3xl mx-auto mb-12">
             Этот курс научит вашего ребёнка реальному разговорному английскому, который пригодится в отпуске, поездках и будущих путешествиях!
           </p>
 
-          <button 
-            onClick={scrollToBottom}
+          {/* Первая кнопка (теперь открывает модалку) */}
+          <button
+            onClick={openModal}
             className="group relative px-8 py-4 bg-gradient-to-r from-secondary to-accent rounded-xl overflow-hidden transition-all hover:shadow-lg hover:shadow-secondary/50 hover:scale-105"
           >
             <div className="absolute inset-0 bg-gradient-to-r from-accent to-secondary opacity-0 group-hover:opacity-100 transition-opacity"></div>
@@ -376,7 +379,7 @@ export default function App() {
                   </div>
                   <h3 className="text-xl mb-3 text-accent">Полный курс</h3>
                   <div className="flex items-baseline gap-2 mb-2">
-                    <span className="text-4xl font-bold text-accent">12 000</span>
+                    <span className="text-4xl font-bold text-accent">150 бел. руб.</span>
                     <span className="text-xl text-muted-foreground">руб</span>
                   </div>
                   <p className="text-muted-foreground">10 уроков</p>
@@ -385,7 +388,7 @@ export default function App() {
                 <div className="bg-card border border-border rounded-2xl p-6">
                   <h3 className="text-xl mb-3">Абонемент</h3>
                   <div className="flex items-baseline gap-2 mb-2">
-                    <span className="text-3xl font-bold">1 300</span>
+                    <span className="text-3xl font-bold">12 бел. руб.</span>
                     <span className="text-xl text-muted-foreground">руб / урок</span>
                   </div>
                 </div>
@@ -404,7 +407,7 @@ export default function App() {
           </div>
 
           <h2 className="text-3xl md:text-4xl mb-6">Места ограничены!</h2>
-          
+
           <p className="text-lg md:text-xl text-muted-foreground mb-8">
             Группы маленькие — максимум <span className="text-accent font-semibold">6 детей</span>, чтобы каждый получил внимание.
           </p>
@@ -413,8 +416,10 @@ export default function App() {
             👉 Запишитесь сейчас — и следующее путешествие станет первым, где ваш ребёнок заговорит по-английски без страха!
           </p>
 
-          <button 
+          {/* Вторая кнопка (теперь открывает модалку) */}
+          <button
             id="register-button"
+            onClick={openModal}
             className="group relative px-12 py-6 bg-gradient-to-r from-secondary to-accent rounded-2xl overflow-hidden transition-all hover:shadow-2xl hover:shadow-secondary/50 hover:scale-105"
           >
             <div className="absolute inset-0 bg-gradient-to-r from-accent to-secondary opacity-0 group-hover:opacity-100 transition-opacity"></div>
@@ -433,6 +438,98 @@ export default function App() {
           <p>© 2026 Английский для путешествий. Все права защищены.</p>
         </div>
       </footer>
+
+      {/* Модальное окно с формой */}
+      {isModalOpen && (
+        <div style={styles.overlay} onClick={closeModal}>
+          <div style={styles.modal} onClick={(e) => e.stopPropagation()}>
+            <h2 style={styles.title}>Запись на курс</h2>
+            <form action="https://formspree.io/f/ваш-код" method="POST">
+              <div style={styles.field}>
+                <label>Имя:</label>
+                <input type="text" name="name" required style={styles.input} />
+              </div>
+              <div style={styles.field}>
+                <label>Email:</label>
+                <input type="email" name="email" required style={styles.input} />
+              </div>
+              <div style={styles.field}>
+                <label>Телефон:</label>
+                <input type="tel" name="phone" required style={styles.input} />
+              </div>
+              <div style={styles.buttons}>
+                <button type="submit" style={styles.submitButton}>Отправить</button>
+                <button type="button" onClick={closeModal} style={styles.closeButton}>Закрыть</button>
+              </div>
+            </form>
+          </div>
+        </div>
+      )}
     </div>
   );
 }
+
+// Стили для модального окна
+const styles = {
+  overlay: {
+    position: 'fixed',
+    top: 0,
+    left: 0,
+    width: '100%',
+    height: '100%',
+    backgroundColor: 'rgba(0,0,0,0.5)',
+    display: 'flex',
+    alignItems: 'center',
+    justifyContent: 'center',
+    zIndex: 1000,
+  },
+  modal: {
+    background: 'white',
+    padding: '30px',
+    borderRadius: '12px',
+    maxWidth: '400px',
+    width: '90%',
+    boxShadow: '0 10px 25px rgba(0,0,0,0.2)',
+  },
+  title: {
+    marginTop: 0,
+    marginBottom: '20px',
+    color: '#333',
+  },
+  field: {
+    marginBottom: '15px',
+  },
+  input: {
+    width: '100%',
+    padding: '10px',
+    marginTop: '5px',
+    borderRadius: '6px',
+    border: '1px solid #ccc',
+    fontSize: '16px',
+  },
+  buttons: {
+    display: 'flex',
+    gap: '10px',
+    marginTop: '20px',
+  },
+  submitButton: {
+    flex: 1,
+    backgroundColor: '#4CAF50',
+    color: 'white',
+    padding: '12px',
+    border: 'none',
+    borderRadius: '6px',
+    cursor: 'pointer',
+    fontSize: '16px',
+  },
+  closeButton: {
+    flex: 1,
+    backgroundColor: '#f44336',
+    color: 'white',
+    padding: '12px',
+    border: 'none',
+    borderRadius: '6px',
+    cursor: 'pointer',
+    fontSize: '16px',
+  },
+};
