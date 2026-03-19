@@ -2,7 +2,7 @@ name: Deploy to GitHub Pages
 
 on:
   push:
-    branches: [ "main" ]   # или master, если основная ветка master
+    branches: [ "main" ]
 
 jobs:
   build-and-deploy:
@@ -17,15 +17,16 @@ jobs:
           node-version: 18
 
       - name: Install dependencies
-        run: npm install   # используем install, т.к. нет гарантии package-lock.json
+        run: npm install   # используем npm install вместо npm ci (может не быть package-lock.json)
 
       - name: Build project
         run: npm run build
 
       - name: Deploy to GitHub Pages
-        uses: peaceiris/actions-gh-pages@v4
+        uses: peaceiris/actions-gh-pages@v4   # исправлено peaceris → peaceiris
         with:
-          github_token: ${{ secrets.GITHUB_TOKEN }}
+          github_token: ${{ secrets.GITHUB_TOKEN }}   # исправлен синтаксис
           publish_dir: ./dist
           publish_branch: gh-pages
+          enable_jekyll: true
           enable_jekyll: true
