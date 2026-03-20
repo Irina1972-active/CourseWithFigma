@@ -17,8 +17,8 @@ import {
   CheckCircle2
 } from 'lucide-react';
 import { ImageWithFallback } from './components/figma/ImageWithFallback';
-
-export default function App() {import './styles/index.css';
+import './styles/index.css';
+export default function App() {
   // Состояние для модального окна
   const [isModalOpen, setIsModalOpen] = useState(false);
   const openModal = () => setIsModalOpen(true);
