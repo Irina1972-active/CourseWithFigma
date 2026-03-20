@@ -18,6 +18,7 @@ import {
 } from 'lucide-react';
 import { ImageWithFallback } from './components/figma/ImageWithFallback';
 import '../styles/index.css';
+
 export default function App() {
   // Состояние для модального окна
   const [isModalOpen, setIsModalOpen] = useState(false);
@@ -35,19 +36,18 @@ export default function App() {
             alt="Travel adventure"
             className="w-full h-full object-cover opacity-30"
           />
-         <div className="absolute inset-0 bg-gradient-to-br from-primary/30 via-secondary/20 to-accent/30 backdrop-blur-sm"></div>
+          <div className="absolute inset-0 bg-gradient-to-br from-primary/30 via-secondary/20 to-accent/30 backdrop-blur-sm"></div>
         </div>
 
         {/* Content */}
         <div className="relative z-10 container mx-auto px-4 py-20 text-center">
-        <div className="inline-flex items-center gap-2 px-6 py-3 rounded-full bg-gradient-to-r from-primary/20 via-secondary/20 to-accent/20 border-2 border-primary/40 mb-8 animate-pulse shadow-lg shadow-primary/20">
-  <Sparkles className="w-5 h-5 text-primary animate-spin" />
-  <span className="text-sm font-bold text-primary">✨ Набор открыт!</span>
-</div>
+          <div className="inline-flex items-center gap-2 px-6 py-3 rounded-full bg-gradient-to-r from-primary/20 via-secondary/20 to-accent/20 border-2 border-primary/40 mb-8 animate-pulse shadow-lg shadow-primary/20">
+            <Sparkles className="w-5 h-5 text-primary animate-spin" />
+            <span className="text-sm font-bold text-primary">✨ Набор открыт!</span>
+          </div>
 
-<h1 className="text-4xl md:text-6xl lg:text-7xl mb-6 gradient-text font-extrabold drop-shadow-lg">
-  Английский для путешествий
-</h1>
+          <h1 className="text-4xl md:text-6xl lg:text-7xl mb-6 gradient-text font-extrabold drop-shadow-lg">
+            Английский для путешествий
           </h1>
 
           <p className="text-lg md:text-xl lg:text-2xl text-muted-foreground max-w-4xl mx-auto mb-8 leading-relaxed">
@@ -58,19 +58,20 @@ export default function App() {
             Этот курс научит вашего ребёнка реальному разговорному английскому, который пригодится в отпуске, поездках и будущих путешествиях!
           </p>
 
-          {/* Первая кнопка (теперь открывает модалку) */}
-         <button
-  onClick={openModal}
-  className="neon-button group relative px-10 py-5 bg-gradient-to-r from-primary via-secondary to-accent 
-             rounded-2xl overflow-hidden shadow-xl hover:shadow-2xl transition-all duration-300 
-             hover:-translate-y-1"
->
-  <div className="absolute inset-0 bg-gradient-to-r from-accent via-hot-pink to-neon-blue 
-                  opacity-0 group-hover:opacity-100 transition-all duration-500 bg-[length:200%_200%]"></div>
-  <span className="relative z-10 text-white font-bold text-xl flex items-center gap-2 drop-shadow-lg">
-    🚀 Записаться на курс
-  </span>
-</button>
+          {/* Первая кнопка */}
+          <button
+            onClick={openModal}
+            className="neon-button group relative px-10 py-5 bg-gradient-to-r from-primary via-secondary to-accent 
+                       rounded-2xl overflow-hidden shadow-xl hover:shadow-2xl transition-all duration-300 
+                       hover:-translate-y-1"
+          >
+            <div className="absolute inset-0 bg-gradient-to-r from-accent via-hot-pink to-neon-blue 
+                            opacity-0 group-hover:opacity-100 transition-all duration-500 bg-[length:200%_200%]"></div>
+            <span className="relative z-10 text-white font-bold text-xl flex items-center gap-2 drop-shadow-lg">
+              🚀 Записаться на курс
+            </span>
+          </button>
+        </div>
       </section>
 
       {/* Для кого курс */}
@@ -78,126 +79,130 @@ export default function App() {
         <div className="container mx-auto max-w-6xl">
           <div className="flex items-center justify-center gap-3 mb-12">
             <Users className="w-8 h-8 text-primary" />
-            <h2 className="text-3xl md:text-4xl text-center">Для кого курс</h2>
+            <h2 className="text-3xl md:text-4xl text-center gradient-text font-bold">Для кого курс</h2>
           </div>
 
           <div className="grid md:grid-cols-2 gap-6 max-w-4xl mx-auto">
-           <div className="grid md:grid-cols-2 gap-6 max-w-4xl mx-auto">
-  <div className="card-hover bg-gradient-to-br from-primary/20 via-primary/10 to-secondary/20 
-                  border-2 border-primary/40 rounded-3xl p-8 relative overflow-hidden shadow-lg">
-    <div className="absolute top-0 right-0 w-32 h-32 bg-primary/20 rounded-full -mr-16 -mt-16 blur-2xl"></div>
-    <div className="relative">
-      <div className="w-16 h-16 rounded-2xl bg-gradient-to-br from-primary to-secondary 
-                      flex items-center justify-center mb-4 shadow-lg animate-float">
-        <span className="text-3xl text-white font-bold">1</span>
-      </div>
-      <h3 className="text-2xl mb-3 gradient-text font-bold">Первая группа</h3>
-      <p className="text-lg text-muted-foreground">4–5 класс</p>
-    </div>
-  </div>
+            <div className="card-hover bg-gradient-to-br from-primary/20 via-primary/10 to-secondary/20 
+                            border-2 border-primary/40 rounded-3xl p-8 relative overflow-hidden shadow-lg">
+              <div className="absolute top-0 right-0 w-32 h-32 bg-primary/20 rounded-full -mr-16 -mt-16 blur-2xl"></div>
+              <div className="relative">
+                <div className="w-16 h-16 rounded-2xl bg-gradient-to-br from-primary to-secondary 
+                                flex items-center justify-center mb-4 shadow-lg animate-float">
+                  <span className="text-3xl text-white font-bold">1</span>
+                </div>
+                <h3 className="text-2xl mb-3 gradient-text font-bold">Первая группа</h3>
+                <p className="text-lg text-muted-foreground">4–5 класс</p>
+              </div>
+            </div>
 
-  <div className="card-hover bg-gradient-to-br from-secondary/20 via-secondary/10 to-accent/20 
-                  border-2 border-secondary/40 rounded-3xl p-8 relative overflow-hidden shadow-lg">
-    <div className="absolute top-0 right-0 w-32 h-32 bg-secondary/20 rounded-full -mr-16 -mt-16 blur-2xl"></div>
-    <div className="relative">
-      <div className="w-16 h-16 rounded-2xl bg-gradient-to-br from-secondary to-accent 
-                      flex items-center justify-center mb-4 shadow-lg animate-float">
-        <span className="text-3xl text-white font-bold">2</span>
-      </div>
-      <h3 className="text-2xl mb-3 gradient-text font-bold">Вторая группа</h3>
-      <p className="text-lg text-muted-foreground">6–8 класс</p>
-    </div>
-  </div>
-</div>
+            <div className="card-hover bg-gradient-to-br from-secondary/20 via-secondary/10 to-accent/20 
+                            border-2 border-secondary/40 rounded-3xl p-8 relative overflow-hidden shadow-lg">
+              <div className="absolute top-0 right-0 w-32 h-32 bg-secondary/20 rounded-full -mr-16 -mt-16 blur-2xl"></div>
+              <div className="relative">
+                <div className="w-16 h-16 rounded-2xl bg-gradient-to-br from-secondary to-accent 
+                                flex items-center justify-center mb-4 shadow-lg animate-float">
+                  <span className="text-3xl text-white font-bold">2</span>
+                </div>
+                <h3 className="text-2xl mb-3 gradient-text font-bold">Вторая группа</h3>
+                <p className="text-lg text-muted-foreground">6–8 класс</p>
+              </div>
+            </div>
+          </div>
+        </div>
       </section>
 
       {/* Программа курса */}
       <section className="py-20 px-4 bg-card/30">
         <div className="container mx-auto max-w-6xl">
-          <h2 className="text-3xl md:text-4xl text-center mb-16 flex items-center justify-center gap-3">
+          <h2 className="text-3xl md:text-4xl text-center mb-16 flex items-center justify-center gap-3 gradient-text font-bold">
             <span className="text-accent">📚</span>
             Программа курса
           </h2>
 
           <div className="grid md:grid-cols-2 gap-6">
             {/* Модуль 1 */}
-    <div className="card-hover bg-gradient-to-br from-primary/10 via-secondary/10 to-accent/10 
-               <div className="card-hover bg-gradient-to-br from-primary/10 via-secondary/10 to-accent/10 
-                border-2 border-primary/30 rounded-3xl p-6 hover:border-primary/60 transition-all group shadow-md">
-  <div className="flex items-start gap-4">
-    <div className="w-14 h-14 rounded-2xl bg-gradient-to-br from-primary to-secondary 
-                    flex items-center justify-center flex-shrink-0 
-                    group-hover:scale-110 group-hover:rotate-6 transition-all shadow-lg">
-      <Plane className="w-7 h-7 text-white" />
-    </div>
-    <div>
-      <h3 className="text-xl mb-2 gradient-text font-bold">Аэропорт без стресса</h3>
-      <p className="text-muted-foreground mb-3">
-        Регистрация, паспортный контроль, вопросы на таможне — всё на английском.
-      </p>
-      <p className="text-sm text-foreground/70 flex items-start gap-2">
-        <span className="text-accent font-bold">✨</span>
-        Уверенность уже в первые часы за границей.
-      </p>
-    </div>
-  </div>
-</div>
-            {/* Модуль 2 */}
-        <div className="card-hover bg-gradient-to-br from-secondary/10 via-accent/10 to-hot-pink/10 
-                border-2 border-secondary/30 rounded-3xl p-6 hover:border-secondary/60 transition-all group shadow-md">
-  <div className="flex items-start gap-4">
-    <div className="w-14 h-14 rounded-2xl bg-gradient-to-br from-secondary to-accent 
-                    flex items-center justify-center flex-shrink-0 
-                    group-hover:scale-110 group-hover:rotate-6 transition-all shadow-lg">
-      <Hotel className="w-7 h-7 text-white" />
-    </div>
-    <div>
-      <h3 className="text-xl mb-2 gradient-text font-bold">В отеле: заселение и помощь</h3>
-      <p className="text-muted-foreground mb-3">
-        Как попросить сменить номер, вызвать уборку или спросить про Wi-Fi.
-      </p>
-      <p className="text-sm text-foreground/70 flex items-start gap-2">
-        <span className="text-accent font-bold">✨</span>
-        Практика вежливых фраз и повседневной лексики.
-      </p>
-    </div>
-  </div>
-</div>
-            {/* Модуль 3 */}
-            <div className="card-hover bg-gradient-to-br from-accent/10 via-hot-pink/10 to-secondary/10 
-                border-2 border-accent/30 rounded-3xl p-6 hover:border-accent/60 transition-all group shadow-md">
-  <div className="flex items-start gap-4">
-    <div className="w-14 h-14 rounded-2xl bg-gradient-to-br from-accent to-hot-pink 
-                    flex items-center justify-center flex-shrink-0 
-                    group-hover:scale-110 group-hover:rotate-6 transition-all shadow-lg">
-      <UtensilsCrossed className="w-7 h-7 text-white" />
-    </div>
-    <div>
-      <h3 className="text-xl mb-2 gradient-text font-bold">Кафе и рестораны</h3>
-      <p className="text-muted-foreground mb-3">
-        Заказ еды, вопросы про аллергены, счёт и чаевые.
-      </p>
-      <p className="text-sm text-foreground/70 flex items-start gap-2">
-        <span className="text-accent font-bold">✨</span>
-        Развитие гастрономического словаря и уверенности в общении.
-      </p>
-    </div>
-  </div>
-</div>>
-
-            {/* Модуль 4 */}
-            <div className="bg-background border border-border rounded-2xl p-6 hover:border-primary/40 transition-all group">
+            <div className="card-hover bg-gradient-to-br from-primary/10 via-secondary/10 to-accent/10 
+                            border-2 border-primary/30 rounded-3xl p-6 hover:border-primary/60 transition-all group shadow-md">
               <div className="flex items-start gap-4">
-                <div className="w-12 h-12 rounded-xl bg-primary/10 flex items-center justify-center flex-shrink-0 group-hover:bg-primary/20 transition-colors">
-                  <MapPin className="w-6 h-6 text-primary" />
+                <div className="w-14 h-14 rounded-2xl bg-gradient-to-br from-primary to-secondary 
+                                flex items-center justify-center flex-shrink-0 
+                                group-hover:scale-110 group-hover:rotate-6 transition-all shadow-lg">
+                  <Plane className="w-7 h-7 text-white" />
                 </div>
                 <div>
-                  <h3 className="text-xl mb-2 text-primary">На улице: ориентирование и просьбы</h3>
+                  <h3 className="text-xl mb-2 gradient-text font-bold">Аэропорт без стресса</h3>
+                  <p className="text-muted-foreground mb-3">
+                    Регистрация, паспортный контроль, вопросы на таможне — всё на английском.
+                  </p>
+                  <p className="text-sm text-foreground/70 flex items-start gap-2">
+                    <span className="text-accent font-bold">✨</span>
+                    Уверенность уже в первые часы за границей.
+                  </p>
+                </div>
+              </div>
+            </div>
+
+            {/* Модуль 2 */}
+            <div className="card-hover bg-gradient-to-br from-secondary/10 via-accent/10 to-hot-pink/10 
+                            border-2 border-secondary/30 rounded-3xl p-6 hover:border-secondary/60 transition-all group shadow-md">
+              <div className="flex items-start gap-4">
+                <div className="w-14 h-14 rounded-2xl bg-gradient-to-br from-secondary to-accent 
+                                flex items-center justify-center flex-shrink-0 
+                                group-hover:scale-110 group-hover:rotate-6 transition-all shadow-lg">
+                  <Hotel className="w-7 h-7 text-white" />
+                </div>
+                <div>
+                  <h3 className="text-xl mb-2 gradient-text font-bold">В отеле: заселение и помощь</h3>
+                  <p className="text-muted-foreground mb-3">
+                    Как попросить сменить номер, вызвать уборку или спросить про Wi-Fi.
+                  </p>
+                  <p className="text-sm text-foreground/70 flex items-start gap-2">
+                    <span className="text-accent font-bold">✨</span>
+                    Практика вежливых фраз и повседневной лексики.
+                  </p>
+                </div>
+              </div>
+            </div>
+
+            {/* Модуль 3 */}
+            <div className="card-hover bg-gradient-to-br from-accent/10 via-hot-pink/10 to-secondary/10 
+                            border-2 border-accent/30 rounded-3xl p-6 hover:border-accent/60 transition-all group shadow-md">
+              <div className="flex items-start gap-4">
+                <div className="w-14 h-14 rounded-2xl bg-gradient-to-br from-accent to-hot-pink 
+                                flex items-center justify-center flex-shrink-0 
+                                group-hover:scale-110 group-hover:rotate-6 transition-all shadow-lg">
+                  <UtensilsCrossed className="w-7 h-7 text-white" />
+                </div>
+                <div>
+                  <h3 className="text-xl mb-2 gradient-text font-bold">Кафе и рестораны</h3>
+                  <p className="text-muted-foreground mb-3">
+                    Заказ еды, вопросы про аллергены, счёт и чаевые.
+                  </p>
+                  <p className="text-sm text-foreground/70 flex items-start gap-2">
+                    <span className="text-accent font-bold">✨</span>
+                    Развитие гастрономического словаря и уверенности в общении.
+                  </p>
+                </div>
+              </div>
+            </div>
+
+            {/* Модуль 4 */}
+            <div className="card-hover bg-gradient-to-br from-primary/10 via-neon-blue/10 to-secondary/10 
+                            border-2 border-primary/30 rounded-3xl p-6 hover:border-primary/60 transition-all group shadow-md">
+              <div className="flex items-start gap-4">
+                <div className="w-14 h-14 rounded-2xl bg-gradient-to-br from-primary to-neon-blue 
+                                flex items-center justify-center flex-shrink-0 
+                                group-hover:scale-110 group-hover:rotate-6 transition-all shadow-lg">
+                  <MapPin className="w-7 h-7 text-white" />
+                </div>
+                <div>
+                  <h3 className="text-xl mb-2 gradient-text font-bold">На улице: ориентирование и просьбы</h3>
                   <p className="text-muted-foreground mb-3">
                     Как спросить дорогу, вызвать такси или найти аптеку.
                   </p>
                   <p className="text-sm text-foreground/70 flex items-start gap-2">
-                    <span className="text-accent">👉</span>
+                    <span className="text-accent font-bold">✨</span>
                     Понимание устной речи и произношения в реальных ситуациях.
                   </p>
                 </div>
@@ -205,18 +210,21 @@ export default function App() {
             </div>
 
             {/* Модуль 5 */}
-            <div className="bg-background border border-border rounded-2xl p-6 hover:border-secondary/40 transition-all group">
+            <div className="card-hover bg-gradient-to-br from-secondary/10 via-hot-pink/10 to-accent/10 
+                            border-2 border-secondary/30 rounded-3xl p-6 hover:border-secondary/60 transition-all group shadow-md">
               <div className="flex items-start gap-4">
-                <div className="w-12 h-12 rounded-xl bg-secondary/10 flex items-center justify-center flex-shrink-0 group-hover:bg-secondary/20 transition-colors">
-                  <AlertCircle className="w-6 h-6 text-secondary" />
+                <div className="w-14 h-14 rounded-2xl bg-gradient-to-br from-secondary to-hot-pink 
+                                flex items-center justify-center flex-shrink-0 
+                                group-hover:scale-110 group-hover:rotate-6 transition-all shadow-lg">
+                  <AlertCircle className="w-7 h-7 text-white" />
                 </div>
                 <div>
-                  <h3 className="text-xl mb-2 text-secondary">Экстренные случаи</h3>
+                  <h3 className="text-xl mb-2 gradient-text font-bold">Экстренные случаи</h3>
                   <p className="text-muted-foreground mb-3">
                     Потеря вещей, болезнь, помощь полиции — всё это на английском.
                   </p>
                   <p className="text-sm text-foreground/70 flex items-start gap-2">
-                    <span className="text-accent">👉</span>
+                    <span className="text-accent font-bold">✨</span>
                     Важные фразы, которые могут спасти отпуск.
                   </p>
                 </div>
@@ -224,18 +232,21 @@ export default function App() {
             </div>
 
             {/* Модуль 6 */}
-            <div className="bg-background border border-border rounded-2xl p-6 hover:border-accent/40 transition-all group">
+            <div className="card-hover bg-gradient-to-br from-accent/10 via-primary/10 to-neon-blue/10 
+                            border-2 border-accent/30 rounded-3xl p-6 hover:border-accent/60 transition-all group shadow-md">
               <div className="flex items-start gap-4">
-                <div className="w-12 h-12 rounded-xl bg-accent/10 flex items-center justify-center flex-shrink-0 group-hover:bg-accent/20 transition-colors">
-                  <Camera className="w-6 h-6 text-accent" />
+                <div className="w-14 h-14 rounded-2xl bg-gradient-to-br from-accent to-primary 
+                                flex items-center justify-center flex-shrink-0 
+                                group-hover:scale-110 group-hover:rotate-6 transition-all shadow-lg">
+                  <Camera className="w-7 h-7 text-white" />
                 </div>
                 <div>
-                  <h3 className="text-xl mb-2 text-accent">Туризм и развлечения</h3>
+                  <h3 className="text-xl mb-2 gradient-text font-bold">Туризм и развлечения</h3>
                   <p className="text-muted-foreground mb-3">
                     Покупка билетов, экскурсии, общение с гидами, музеи и парки.
                   </p>
                   <p className="text-sm text-foreground/70 flex items-start gap-2">
-                    <span className="text-accent">👉</span>
+                    <span className="text-accent font-bold">✨</span>
                     Погружение в культурный контекст через язык.
                   </p>
                 </div>
@@ -243,18 +254,21 @@ export default function App() {
             </div>
 
             {/* Модуль 7 */}
-            <div className="bg-background border border-border rounded-2xl p-6 hover:border-primary/40 transition-all group">
+            <div className="card-hover bg-gradient-to-br from-primary/10 via-secondary/10 to-hot-pink/10 
+                            border-2 border-primary/30 rounded-3xl p-6 hover:border-primary/60 transition-all group shadow-md">
               <div className="flex items-start gap-4">
-                <div className="w-12 h-12 rounded-xl bg-primary/10 flex items-center justify-center flex-shrink-0 group-hover:bg-primary/20 transition-colors">
-                  <UserPlus className="w-6 h-6 text-primary" />
+                <div className="w-14 h-14 rounded-2xl bg-gradient-to-br from-primary to-secondary 
+                                flex items-center justify-center flex-shrink-0 
+                                group-hover:scale-110 group-hover:rotate-6 transition-all shadow-lg">
+                  <UserPlus className="w-7 h-7 text-white" />
                 </div>
                 <div>
-                  <h3 className="text-xl mb-2 text-primary">Дружба в путешествиях</h3>
+                  <h3 className="text-xl mb-2 gradient-text font-bold">Дружба в путешествиях</h3>
                   <p className="text-muted-foreground mb-3">
                     Как познакомиться с другими детьми или подростками за границей.
                   </p>
                   <p className="text-sm text-foreground/70 flex items-start gap-2">
-                    <span className="text-accent">👉</span>
+                    <span className="text-accent font-bold">✨</span>
                     Игровая практика диалогов и неформального общения.
                   </p>
                 </div>
@@ -262,18 +276,21 @@ export default function App() {
             </div>
 
             {/* Модуль 8 */}
-            <div className="bg-background border border-border rounded-2xl p-6 hover:border-secondary/40 transition-all group">
+            <div className="card-hover bg-gradient-to-br from-secondary/10 via-accent/10 to-primary/10 
+                            border-2 border-secondary/30 rounded-3xl p-6 hover:border-secondary/60 transition-all group shadow-md">
               <div className="flex items-start gap-4">
-                <div className="w-12 h-12 rounded-xl bg-secondary/10 flex items-center justify-center flex-shrink-0 group-hover:bg-secondary/20 transition-colors">
-                  <Trophy className="w-6 h-6 text-secondary" />
+                <div className="w-14 h-14 rounded-2xl bg-gradient-to-br from-secondary to-accent 
+                                flex items-center justify-center flex-shrink-0 
+                                group-hover:scale-110 group-hover:rotate-6 transition-all shadow-lg">
+                  <Trophy className="w-7 h-7 text-white" />
                 </div>
                 <div>
-                  <h3 className="text-xl mb-2 text-secondary">Дипломный проект: «Мой идеальный отпуск»</h3>
+                  <h3 className="text-xl mb-2 gradient-text font-bold">Дипломный проект: «Мой идеальный отпуск»</h3>
                   <p className="text-muted-foreground mb-3">
                     Ребёнок планирует воображаемое путешествие и представляет его на английском.
                   </p>
                   <p className="text-sm text-foreground/70 flex items-start gap-2">
-                    <span className="text-accent">👉</span>
+                    <span className="text-accent font-bold">✨</span>
                     Развитие связной речи и творческого самовыражения.
                   </p>
                 </div>
@@ -286,44 +303,56 @@ export default function App() {
       {/* Почему этот курс особенный */}
       <section className="py-20 px-4">
         <div className="container mx-auto max-w-6xl">
-          <h2 className="text-3xl md:text-4xl text-center mb-16 flex items-center justify-center gap-3">
+          <h2 className="text-3xl md:text-4xl text-center mb-16 flex items-center justify-center gap-3 gradient-text font-bold">
             <Sparkles className="w-8 h-8 text-accent" />
             Почему этот курс особенный?
           </h2>
 
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
-            <div className="bg-gradient-to-br from-primary/5 to-primary/10 border border-primary/20 rounded-2xl p-6 text-center">
-              <div className="w-16 h-16 rounded-full bg-primary/20 flex items-center justify-center mx-auto mb-4">
-                <CheckCircle2 className="w-8 h-8 text-primary" />
+            <div className="card-hover bg-gradient-to-br from-primary/15 via-secondary/10 to-accent/15 
+                            border-2 border-primary/30 rounded-3xl p-6 text-center shadow-lg 
+                            hover:shadow-2xl hover:shadow-primary/30 transition-all duration-300">
+              <div className="w-20 h-20 rounded-full bg-gradient-to-br from-primary to-secondary 
+                              flex items-center justify-center mx-auto mb-4 shadow-lg animate-float">
+                <CheckCircle2 className="w-10 h-10 text-white" />
               </div>
-              <p className="text-foreground/90">
+              <p className="text-foreground/90 font-medium">
                 Акцент на практическую, живую речь, а не на грамматику ради грамматики
               </p>
             </div>
 
-            <div className="bg-gradient-to-br from-secondary/5 to-secondary/10 border border-secondary/20 rounded-2xl p-6 text-center">
-              <div className="w-16 h-16 rounded-full bg-secondary/20 flex items-center justify-center mx-auto mb-4">
-                <Star className="w-8 h-8 text-secondary" />
+            <div className="card-hover bg-gradient-to-br from-secondary/15 via-accent/10 to-primary/15 
+                            border-2 border-secondary/30 rounded-3xl p-6 text-center shadow-lg 
+                            hover:shadow-2xl hover:shadow-secondary/30 transition-all duration-300">
+              <div className="w-20 h-20 rounded-full bg-gradient-to-br from-secondary to-accent 
+                              flex items-center justify-center mx-auto mb-4 shadow-lg animate-float">
+                <Star className="w-10 h-10 text-white" />
               </div>
-              <p className="text-foreground/90">
+              <p className="text-foreground/90 font-medium">
                 Все ситуации — из реальной жизни путешественника
               </p>
             </div>
 
-            <div className="bg-gradient-to-br from-accent/5 to-accent/10 border border-accent/20 rounded-2xl p-6 text-center">
-              <div className="w-16 h-16 rounded-full bg-accent/20 flex items-center justify-center mx-auto mb-4">
-                <Trophy className="w-8 h-8 text-accent" />
+            <div className="card-hover bg-gradient-to-br from-accent/15 via-hot-pink/10 to-secondary/15 
+                            border-2 border-accent/30 rounded-3xl p-6 text-center shadow-lg 
+                            hover:shadow-2xl hover:shadow-accent/30 transition-all duration-300">
+              <div className="w-20 h-20 rounded-full bg-gradient-to-br from-accent to-hot-pink 
+                              flex items-center justify-center mx-auto mb-4 shadow-lg animate-float">
+                <Trophy className="w-10 h-10 text-white" />
               </div>
-              <p className="text-foreground/90">
+              <p className="text-foreground/90 font-medium">
                 Интерактивные задания: ролевые игры, аудиоситуации, мини-квесты
               </p>
             </div>
 
-            <div className="bg-gradient-to-br from-primary/5 to-accent/10 border border-primary/20 rounded-2xl p-6 text-center">
-              <div className="w-16 h-16 rounded-full bg-accent/20 flex items-center justify-center mx-auto mb-4">
-                <Sparkles className="w-8 h-8 text-primary" />
+            <div className="card-hover bg-gradient-to-br from-primary/15 via-neon-blue/10 to-accent/15 
+                            border-2 border-primary/30 rounded-3xl p-6 text-center shadow-lg 
+                            hover:shadow-2xl hover:shadow-primary/30 transition-all duration-300">
+              <div className="w-20 h-20 rounded-full bg-gradient-to-br from-primary to-neon-blue 
+                              flex items-center justify-center mx-auto mb-4 shadow-lg animate-float">
+                <Sparkles className="w-10 h-10 text-white" />
               </div>
-              <p className="text-foreground/90">
+              <p className="text-foreground/90 font-medium">
                 Ребёнок выходит на уровень A2–B1 (Pre-Intermediate) за курс
               </p>
             </div>
@@ -334,12 +363,13 @@ export default function App() {
       {/* Что потребуется */}
       <section className="py-20 px-4 bg-card/30">
         <div className="container mx-auto max-w-4xl">
-          <h2 className="text-3xl md:text-4xl text-center mb-12 flex items-center justify-center gap-3">
+          <h2 className="text-3xl md:text-4xl text-center mb-12 flex items-center justify-center gap-3 gradient-text font-bold">
             <Monitor className="w-8 h-8 text-primary" />
             Что потребуется
           </h2>
 
-          <div className="bg-background border border-border rounded-2xl p-8">
+          <div className="card-hover bg-gradient-to-br from-primary/10 via-secondary/10 to-accent/10 
+                          border-2 border-primary/30 rounded-3xl p-8 shadow-lg">
             <ul className="space-y-4">
               <li className="flex items-start gap-3">
                 <CheckCircle2 className="w-6 h-6 text-primary flex-shrink-0 mt-1" />
@@ -360,28 +390,32 @@ export default function App() {
           <div className="grid md:grid-cols-2 gap-8">
             {/* Расписание */}
             <div>
-              <h2 className="text-3xl md:text-4xl mb-8 flex items-center gap-3">
+              <h2 className="text-3xl md:text-4xl mb-8 flex items-center gap-3 gradient-text font-bold">
                 <Clock className="w-8 h-8 text-secondary" />
                 Расписание
               </h2>
 
               <div className="space-y-4">
-                <div className="bg-card border border-primary/20 rounded-2xl p-6 hover:border-primary/40 transition-all">
+                <div className="card-hover bg-gradient-to-br from-primary/10 to-secondary/10 
+                                border-2 border-primary/30 rounded-3xl p-6 shadow-lg">
                   <div className="flex items-center gap-3 mb-2">
-                    <div className="w-10 h-10 rounded-full bg-primary/10 flex items-center justify-center">
-                      <span className="text-primary font-bold">1</span>
+                    <div className="w-10 h-10 rounded-full bg-gradient-to-br from-primary to-secondary 
+                                    flex items-center justify-center shadow-lg">
+                      <span className="text-white font-bold">1</span>
                     </div>
-                    <h3 className="text-xl text-primary">Группа 4–5 класс</h3>
+                    <h3 className="text-xl gradient-text font-bold">Группа 4–5 класс</h3>
                   </div>
                   <p className="text-lg text-muted-foreground ml-13">Четверг, 15:00 (МСК)</p>
                 </div>
 
-                <div className="bg-card border border-secondary/20 rounded-2xl p-6 hover:border-secondary/40 transition-all">
+                <div className="card-hover bg-gradient-to-br from-secondary/10 to-accent/10 
+                                border-2 border-secondary/30 rounded-3xl p-6 shadow-lg">
                   <div className="flex items-center gap-3 mb-2">
-                    <div className="w-10 h-10 rounded-full bg-secondary/10 flex items-center justify-center">
-                      <span className="text-secondary font-bold">2</span>
+                    <div className="w-10 h-10 rounded-full bg-gradient-to-br from-secondary to-accent 
+                                    flex items-center justify-center shadow-lg">
+                      <span className="text-white font-bold">2</span>
                     </div>
-                    <h3 className="text-xl text-secondary">Группа 6–8 класс</h3>
+                    <h3 className="text-xl gradient-text font-bold">Группа 6–8 класс</h3>
                   </div>
                   <p className="text-lg text-muted-foreground ml-13">Пятница, 15:30 (МСК)</p>
                 </div>
@@ -390,17 +424,18 @@ export default function App() {
 
             {/* Стоимость */}
             <div>
-              <h2 className="text-3xl md:text-4xl mb-8 flex items-center gap-3">
+              <h2 className="text-3xl md:text-4xl mb-8 flex items-center gap-3 gradient-text font-bold">
                 <CreditCard className="w-8 h-8 text-accent" />
                 Стоимость
               </h2>
 
               <div className="space-y-4">
-                <div className="bg-gradient-to-br from-accent/10 to-secondary/10 border-2 border-accent/30 rounded-2xl p-6 relative overflow-hidden">
-                  <div className="absolute top-4 right-4 px-3 py-1 bg-accent/20 rounded-full">
-                    <span className="text-sm text-accent font-semibold">Лучшее предложение</span>
+                <div className="card-hover bg-gradient-to-br from-accent/20 to-secondary/20 
+                                border-2 border-accent/40 rounded-3xl p-6 relative overflow-hidden shadow-xl">
+                  <div className="absolute top-4 right-4 px-3 py-1 bg-accent/30 rounded-full">
+                    <span className="text-sm text-accent font-bold">Лучшее предложение</span>
                   </div>
-                  <h3 className="text-xl mb-3 text-accent">Полный курс</h3>
+                  <h3 className="text-xl mb-3 gradient-text font-bold">Полный курс</h3>
                   <div className="flex items-baseline gap-2 mb-2">
                     <span className="text-4xl font-bold text-accent">150 бел. руб.</span>
                     <span className="text-xl text-muted-foreground">руб</span>
@@ -408,10 +443,11 @@ export default function App() {
                   <p className="text-muted-foreground">10 уроков</p>
                 </div>
 
-                <div className="bg-card border border-border rounded-2xl p-6">
-                  <h3 className="text-xl mb-3">Абонемент</h3>
+                <div className="card-hover bg-gradient-to-br from-primary/10 to-secondary/10 
+                                border-2 border-primary/30 rounded-3xl p-6 shadow-lg">
+                  <h3 className="text-xl mb-3 gradient-text font-bold">Абонемент</h3>
                   <div className="flex items-baseline gap-2 mb-2">
-                    <span className="text-3xl font-bold">12 бел. руб.</span>
+                    <span className="text-3xl font-bold text-primary">12 бел. руб.</span>
                     <span className="text-xl text-muted-foreground">руб / урок</span>
                   </div>
                 </div>
@@ -422,37 +458,37 @@ export default function App() {
       </section>
 
       {/* Призыв к действию */}
-      <section className="py-20 px-4 bg-gradient-to-br from-primary/5 via-secondary/5 to-accent/5">
+      <section className="py-20 px-4 bg-gradient-to-br from-primary/10 via-secondary/10 to-accent/10">
         <div className="container mx-auto max-w-4xl text-center">
-          <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-secondary/10 border border-secondary/20 mb-6">
+          <div className="inline-flex items-center gap-2 px-6 py-3 rounded-full bg-secondary/20 border-2 border-secondary/40 mb-6 animate-pulse">
             <AlertCircle className="w-4 h-4 text-secondary" />
-            <span className="text-sm text-secondary font-semibold">📢 Набор открыт!</span>
+            <span className="text-sm text-secondary font-bold">📢 Набор открыт!</span>
           </div>
 
-          <h2 className="text-3xl md:text-4xl mb-6">Места ограничены!</h2>
+          <h2 className="text-3xl md:text-4xl mb-6 gradient-text font-extrabold">Места ограничены!</h2>
 
           <p className="text-lg md:text-xl text-muted-foreground mb-8">
-            Группы маленькие — максимум <span className="text-accent font-semibold">6 детей</span>, чтобы каждый получил внимание.
+            Группы маленькие — максимум <span className="text-accent font-bold">6 детей</span>, чтобы каждый получил внимание.
           </p>
 
           <p className="text-xl md:text-2xl mb-12 text-foreground/90">
             👉 Запишитесь сейчас — и следующее путешествие станет первым, где ваш ребёнок заговорит по-английски без страха!
           </p>
 
-          {/* Вторая кнопка (теперь открывает модалку) */}
-         <button
-  id="register-button"
-  onClick={openModal}
-  className="neon-button group relative px-12 py-6 bg-gradient-to-r from-primary via-secondary to-accent 
-             rounded-3xl overflow-hidden shadow-2xl hover:shadow-3xl transition-all duration-300 
-             hover:-translate-y-2"
->
-  <div className="absolute inset-0 bg-gradient-to-r from-neon-blue via-hot-pink to-accent 
-                  opacity-0 group-hover:opacity-100 transition-all duration-500"></div>
-  <span className="relative z-10 text-white font-extrabold text-xl md:text-2xl flex items-center gap-3 drop-shadow-lg">
-    🎯 Записаться на курс
-  </span>
-</button>
+          {/* Вторая кнопка */}
+          <button
+            id="register-button"
+            onClick={openModal}
+            className="neon-button group relative px-12 py-6 bg-gradient-to-r from-primary via-secondary to-accent 
+                       rounded-3xl overflow-hidden shadow-2xl hover:shadow-3xl transition-all duration-300 
+                       hover:-translate-y-2"
+          >
+            <div className="absolute inset-0 bg-gradient-to-r from-neon-blue via-hot-pink to-accent 
+                            opacity-0 group-hover:opacity-100 transition-all duration-500"></div>
+            <span className="relative z-10 text-white font-extrabold text-xl md:text-2xl flex items-center gap-3 drop-shadow-lg">
+              🎯 Записаться на курс
+            </span>
+          </button>
 
           <p className="mt-8 text-sm text-muted-foreground">
             При нажатии на кнопку откроется форма регистрации
