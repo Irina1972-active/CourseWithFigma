@@ -58,14 +58,18 @@ export default function App() {
           </p>
 
           {/* Первая кнопка (теперь открывает модалку) */}
-          <button
-            onClick={openModal}
-            className="group relative px-8 py-4 bg-gradient-to-r from-secondary to-accent rounded-xl overflow-hidden transition-all hover:shadow-lg hover:shadow-secondary/50 hover:scale-105"
-          >
-            <div className="absolute inset-0 bg-gradient-to-r from-accent to-secondary opacity-0 group-hover:opacity-100 transition-opacity"></div>
-            <span className="relative z-10 text-background font-semibold text-lg">Записаться на курс</span>
-          </button>
-        </div>
+         <button
+  onClick={openModal}
+  className="neon-button group relative px-10 py-5 bg-gradient-to-r from-primary via-secondary to-accent 
+             rounded-2xl overflow-hidden shadow-xl hover:shadow-2xl transition-all duration-300 
+             hover:-translate-y-1"
+>
+  <div className="absolute inset-0 bg-gradient-to-r from-accent via-hot-pink to-neon-blue 
+                  opacity-0 group-hover:opacity-100 transition-all duration-500 bg-[length:200%_200%]"></div>
+  <span className="relative z-10 text-white font-bold text-xl flex items-center gap-2 drop-shadow-lg">
+    🚀 Записаться на курс
+  </span>
+</button>
       </section>
 
       {/* Для кого курс */}
