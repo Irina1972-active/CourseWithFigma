@@ -18,7 +18,7 @@ import {
 } from 'lucide-react';
 import { ImageWithFallback } from './components/figma/ImageWithFallback';
 
-export default function App() {
+export default function App() {import './styles/index.css';
   // Состояние для модального окна
   const [isModalOpen, setIsModalOpen] = useState(false);
   const openModal = () => setIsModalOpen(true);
