@@ -111,23 +111,26 @@ export default function App() {
 
           <div className="grid md:grid-cols-2 gap-6">
             {/* Модуль 1 */}
-            <div className="bg-background border border-border rounded-2xl p-6 hover:border-primary/40 transition-all group">
-              <div className="flex items-start gap-4">
-                <div className="w-12 h-12 rounded-xl bg-primary/10 flex items-center justify-center flex-shrink-0 group-hover:bg-primary/20 transition-colors">
-                  <Plane className="w-6 h-6 text-primary" />
-                </div>
-                <div>
-                  <h3 className="text-xl mb-2 text-primary">Аэропорт без стресса</h3>
-                  <p className="text-muted-foreground mb-3">
-                    Регистрация, паспортный контроль, вопросы на таможне — всё на английском.
-                  </p>
-                  <p className="text-sm text-foreground/70 flex items-start gap-2">
-                    <span className="text-accent">👉</span>
-                    Уверенность уже в первые часы за границей.
-                  </p>
-                </div>
-              </div>
-            </div>
+    <div className="card-hover bg-gradient-to-br from-primary/10 via-secondary/10 to-accent/10 
+                border-2 border-primary/30 rounded-3xl p-6 hover:border-primary/60 transition-all group shadow-md">
+  <div className="flex items-start gap-4">
+    <div className="w-14 h-14 rounded-2xl bg-gradient-to-br from-primary to-secondary 
+                    flex items-center justify-center flex-shrink-0 
+                    group-hover:scale-110 group-hover:rotate-6 transition-all shadow-lg">
+      <Plane className="w-7 h-7 text-white" />
+    </div>
+    <div>
+      <h3 className="text-xl mb-2 gradient-text font-bold">Аэропорт без стресса</h3>
+      <p className="text-muted-foreground mb-3">
+        Регистрация, паспортный контроль, вопросы на таможне — всё на английском.
+      </p>
+      <p className="text-sm text-foreground/70 flex items-start gap-2">
+        <span className="text-accent font-bold">✨</span>
+        Уверенность уже в первые часы за границей.
+      </p>
+    </div>
+  </div>
+</div>
 
             {/* Модуль 2 */}
             <div className="bg-background border border-border rounded-2xl p-6 hover:border-secondary/40 transition-all group">
