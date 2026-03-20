@@ -143,7 +143,7 @@ export default function App() {
   </div>
 </div>
             {/* Модуль 2 */}
-          <div className="card-hover bg-gradient-to-br from-secondary/10 via-accent/10 to-hot-pink/10 
+        <div className="card-hover bg-gradient-to-br from-secondary/10 via-accent/10 to-hot-pink/10 
                 border-2 border-secondary/30 rounded-3xl p-6 hover:border-secondary/60 transition-all group shadow-md">
   <div className="flex items-start gap-4">
     <div className="w-14 h-14 rounded-2xl bg-gradient-to-br from-secondary to-accent 
