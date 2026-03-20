@@ -35,7 +35,7 @@ export default function App() {
             alt="Travel adventure"
             className="w-full h-full object-cover opacity-30"
           />
-          <div className="absolute inset-0 bg-gradient-to-b from-background via-background/80 to-background"></div>
+         <div className="absolute inset-0 bg-gradient-to-br from-primary/30 via-secondary/20 to-accent/30 backdrop-blur-sm"></div>
         </div>
 
         {/* Content */}
