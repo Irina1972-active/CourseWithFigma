@@ -164,23 +164,26 @@ export default function App() {
   </div>
 </div>
             {/* Модуль 3 */}
-            <div className="bg-background border border-border rounded-2xl p-6 hover:border-accent/40 transition-all group">
-              <div className="flex items-start gap-4">
-                <div className="w-12 h-12 rounded-xl bg-accent/10 flex items-center justify-center flex-shrink-0 group-hover:bg-accent/20 transition-colors">
-                  <UtensilsCrossed className="w-6 h-6 text-accent" />
-                </div>
-                <div>
-                  <h3 className="text-xl mb-2 text-accent">Кафе и рестораны</h3>
-                  <p className="text-muted-foreground mb-3">
-                    Заказ еды, вопросы про аллергены, счёт и чаевые.
-                  </p>
-                  <p className="text-sm text-foreground/70 flex items-start gap-2">
-                    <span className="text-accent">👉</span>
-                    Развитие гастрономического словаря и уверенности в общении.
-                  </p>
-                </div>
-              </div>
-            </div>
+            <div className="card-hover bg-gradient-to-br from-accent/10 via-hot-pink/10 to-secondary/10 
+                border-2 border-accent/30 rounded-3xl p-6 hover:border-accent/60 transition-all group shadow-md">
+  <div className="flex items-start gap-4">
+    <div className="w-14 h-14 rounded-2xl bg-gradient-to-br from-accent to-hot-pink 
+                    flex items-center justify-center flex-shrink-0 
+                    group-hover:scale-110 group-hover:rotate-6 transition-all shadow-lg">
+      <UtensilsCrossed className="w-7 h-7 text-white" />
+    </div>
+    <div>
+      <h3 className="text-xl mb-2 gradient-text font-bold">Кафе и рестораны</h3>
+      <p className="text-muted-foreground mb-3">
+        Заказ еды, вопросы про аллергены, счёт и чаевые.
+      </p>
+      <p className="text-sm text-foreground/70 flex items-start gap-2">
+        <span className="text-accent font-bold">✨</span>
+        Развитие гастрономического словаря и уверенности в общении.
+      </p>
+    </div>
+  </div>
+</div>>
 
             {/* Модуль 4 */}
             <div className="bg-background border border-border rounded-2xl p-6 hover:border-primary/40 transition-all group">
