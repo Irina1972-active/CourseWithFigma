@@ -122,6 +122,7 @@ export default function App() {
           <div className="grid md:grid-cols-2 gap-6">
             {/* Модуль 1 */}
     <div className="card-hover bg-gradient-to-br from-primary/10 via-secondary/10 to-accent/10 
+               <div className="card-hover bg-gradient-to-br from-primary/10 via-secondary/10 to-accent/10 
                 border-2 border-primary/30 rounded-3xl p-6 hover:border-primary/60 transition-all group shadow-md">
   <div className="flex items-start gap-4">
     <div className="w-14 h-14 rounded-2xl bg-gradient-to-br from-primary to-secondary 
@@ -141,7 +142,6 @@ export default function App() {
     </div>
   </div>
 </div>
-
             {/* Модуль 2 */}
             <div className="bg-background border border-border rounded-2xl p-6 hover:border-secondary/40 transition-all group">
               <div className="flex items-start gap-4">
