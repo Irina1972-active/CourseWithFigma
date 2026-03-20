@@ -40,13 +40,14 @@ export default function App() {
 
         {/* Content */}
         <div className="relative z-10 container mx-auto px-4 py-20 text-center">
-          <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-primary/10 border border-primary/20 mb-8">
-            <Sparkles className="w-4 h-4 text-primary" />
-            <span className="text-sm text-primary">Набор открыт!</span>
-          </div>
+        <div className="inline-flex items-center gap-2 px-6 py-3 rounded-full bg-gradient-to-r from-primary/20 via-secondary/20 to-accent/20 border-2 border-primary/40 mb-8 animate-pulse shadow-lg shadow-primary/20">
+  <Sparkles className="w-5 h-5 text-primary animate-spin" />
+  <span className="text-sm font-bold text-primary">✨ Набор открыт!</span>
+</div>
 
-          <h1 className="text-4xl md:text-6xl lg:text-7xl mb-6 bg-gradient-to-r from-primary via-secondary to-accent bg-clip-text text-transparent">
-            Английский для путешествий
+<h1 className="text-4xl md:text-6xl lg:text-7xl mb-6 gradient-text font-extrabold drop-shadow-lg">
+  Английский для путешествий
+</h1>
           </h1>
 
           <p className="text-lg md:text-xl lg:text-2xl text-muted-foreground max-w-4xl mx-auto mb-8 leading-relaxed">
