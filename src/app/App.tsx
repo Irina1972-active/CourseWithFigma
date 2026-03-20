@@ -82,23 +82,33 @@ export default function App() {
           </div>
 
           <div className="grid md:grid-cols-2 gap-6 max-w-4xl mx-auto">
-            <div className="bg-card border border-primary/20 rounded-2xl p-8 hover:border-primary/40 transition-all hover:shadow-lg hover:shadow-primary/10">
-              <div className="w-12 h-12 rounded-full bg-primary/10 flex items-center justify-center mb-4">
-                <span className="text-2xl text-primary font-bold">1</span>
-              </div>
-              <h3 className="text-2xl mb-3 text-primary">Первая группа</h3>
-              <p className="text-lg text-muted-foreground">4–5 класс</p>
-            </div>
+           <div className="grid md:grid-cols-2 gap-6 max-w-4xl mx-auto">
+  <div className="card-hover bg-gradient-to-br from-primary/20 via-primary/10 to-secondary/20 
+                  border-2 border-primary/40 rounded-3xl p-8 relative overflow-hidden shadow-lg">
+    <div className="absolute top-0 right-0 w-32 h-32 bg-primary/20 rounded-full -mr-16 -mt-16 blur-2xl"></div>
+    <div className="relative">
+      <div className="w-16 h-16 rounded-2xl bg-gradient-to-br from-primary to-secondary 
+                      flex items-center justify-center mb-4 shadow-lg animate-float">
+        <span className="text-3xl text-white font-bold">1</span>
+      </div>
+      <h3 className="text-2xl mb-3 gradient-text font-bold">Первая группа</h3>
+      <p className="text-lg text-muted-foreground">4–5 класс</p>
+    </div>
+  </div>
 
-            <div className="bg-card border border-secondary/20 rounded-2xl p-8 hover:border-secondary/40 transition-all hover:shadow-lg hover:shadow-secondary/10">
-              <div className="w-12 h-12 rounded-full bg-secondary/10 flex items-center justify-center mb-4">
-                <span className="text-2xl text-secondary font-bold">2</span>
-              </div>
-              <h3 className="text-2xl mb-3 text-secondary">Вторая группа</h3>
-              <p className="text-lg text-muted-foreground">6–8 класс</p>
-            </div>
-          </div>
-        </div>
+  <div className="card-hover bg-gradient-to-br from-secondary/20 via-secondary/10 to-accent/20 
+                  border-2 border-secondary/40 rounded-3xl p-8 relative overflow-hidden shadow-lg">
+    <div className="absolute top-0 right-0 w-32 h-32 bg-secondary/20 rounded-full -mr-16 -mt-16 blur-2xl"></div>
+    <div className="relative">
+      <div className="w-16 h-16 rounded-2xl bg-gradient-to-br from-secondary to-accent 
+                      flex items-center justify-center mb-4 shadow-lg animate-float">
+        <span className="text-3xl text-white font-bold">2</span>
+      </div>
+      <h3 className="text-2xl mb-3 gradient-text font-bold">Вторая группа</h3>
+      <p className="text-lg text-muted-foreground">6–8 класс</p>
+    </div>
+  </div>
+</div>
       </section>
 
       {/* Программа курса */}
